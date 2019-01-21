@@ -1,0 +1,230 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html {height:100%} 
+body {min-height:100%}
+
+body {
+    background: url('../images/fondo.png') center center / cover no-repeat;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.simple-card {
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 85);
+}
+
+.simple-card h3{
+    font-size: 32px;
+    padding: 30px 32px 23px 32px;
+}
+
+.simple-card .content {
+    padding: 30px 32px 23px 32px;
+}
+
+.sidebar-item .content{
+    text-align: center;
+}
+
+.sidebar-item:not(:first-of-type) {
+    margin-top: 35px;
+}
+
+.sidebar-item h3{
+    text-align: center;
+    border-bottom: solid 3px #000;
+}
+
+.sidebar-item .content {
+    display: flex;
+    flex-flow: column;
+}
+
+.sidebar-item .content a{
+    font-size: 30px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-menu a{
+    border-radius: 40px;
+    font-size: 2em;
+    display: inline-block;
+    margin: 10px 30px;
+    text-align: center;
+    min-width: 165px;
+}
+
+.main-menu a:not(.image-container) {
+    background-color: #fff;
+    padding: 20px 40px;
+}
+
+.main-menu a.image-container {
+    max-width: 290px;
+    padding: 0 40px;
+    max-height: 80px;
+    overflow: hidden;
+}
+
+/** LANDING SECTION */
+
+.container-title {
+    height: 100%;
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+}
+
+/** COMIC SECTION */
+
+.comic-main {
+    display: grid;
+    grid-template-columns: min-content minmax(500px, 1fr) 200px;
+    grid-gap: 35px;
+    margin: 10px 35px;
+    align-items: flex-start;
+}
+
+.comic-rss {
+    min-width: 130px;
+}
+
+.side-expanded .rss-links {
+    flex-flow: row;
+}
+
+.rss-links a {
+    max-width: 50px;
+}
+
+.comic-content {
+    max-height: calc(100vh - 120px);
+    overflow: auto;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.comic-links {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.comic-links a {
+    display: block;
+    max-width: 100px;
+}
+
+
+
+
+/** ART SECTION */
+
+
+.art-main {
+    display: grid;
+    grid-template-columns: min-content minmax(500px, 1fr);
+    grid-gap: 35px;
+    margin: 10px 35px;
+    align-items: flex-start;
+}
+
+.art-main-section {
+    display: grid;
+    grid-template-columns: 230px 1fr 230px;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 40px 30px;
+    max-width: 1000px;
+    margin: auto;
+    grid-template-areas: 
+        "limage card1 rimage"
+        "limage card2 rimage";
+}
+
+.limage {
+    grid-area: limage;
+    width: 230px;
+}
+
+.rimage {
+    grid-area: rimage;
+    width: 230px;
+}
+
+.simple-card1 .content, .simple-card2 .content{
+    font-size: 30px;
+}
+
+.simple-card1 {
+    grid-area: card1;
+    justify-self: flex-start;
+}
+
+.simple-card2 {
+    grid-area: card2;
+    justify-self: flex-end;
+}
+
+.simple-card2 h3 {
+    text-align: right;
+}
+
+/** Characters section */
+.art-characters-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 40px 1fr;
+    grid-gap: 15px 30px;
+    max-width: 1000px;
+    margin: auto;
+    grid-template-areas: 
+        "lcard rimage1"
+        "limage rmiage1"
+        "limage rimage2";
+}
+
+img.art-characters {
+    width: 100%;
+    margin: auto;
+}
+
+.art-characters.rimage1 {
+    grid-area: rimage1;
+}
+
+.art-characters.limage {
+    grid-area: limage;
+}
+
+.art-characters.rimage2 {
+    grid-area: rimage2;
+}
+
+.art-characters-section .simple-card {
+    grid-area: lcard;
+    font-size: 30px;
+}
